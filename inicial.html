@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Pesqueiro</title>
+    <link rel="icon" href="koi-fish.png" sizes="16x16">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: rgb(240, 248, 255);
+        }
+
+        h1 {
+            color: rgb(70, 130, 180);
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            color: rgb(51, 51, 51);
+            font-size: 1.2em;
+            text-align: justify;
+        }
+
+        strong {
+            color: rgb(0, 139, 139);
+        }
+
+        em {
+            font-style: italic;
+            color: rgb(85, 107, 47); 
+        }
+
+        u {
+            text-decoration: underline dotted;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            background-color: rgb(135, 206, 250);
+            border-radius: 5px;
+        }
+
+        nav ul li {
+            margin: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(70, 130, 180);
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .box {
+            background-color: rgb(245, 255, 250);
+            border: 2px solid rgb(70, 130, 180);
+            border-radius: 10px;
+            padding: 20px;
+            width: 45%;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: rgb(70, 130, 180);
+            color:white
+        }
+
+        td {
+            background-color: rgb(245, 255, 250);
+        }
+
+        .box:hover {
+            background-color: rgb(135, 206, 250);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box {
+                width: 90%;
+            }
+
+            table, th, td {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Bem-vindo ao Nosso Pesqueiro!</h1>
+<h3>Não tem uma conta? <a href="forms.html">Cadastre-se aqui</a></h3>
+
+<nav>
+  <ul>
+      <li><a href="#SN">Sobre nós</a></li>
+      <li><a href="#TP">Tipos de peixe</a></li>
+      <li><a href="#AD">Atividades Disponíveis</a></li>
+      <li><a href="#P">Colaboradores</a></li>
+  </ul>
+</nav>
+
+<hr>
+
+<div class="container">
+    <div class="box">
+        <h2 id="SN">Sobre Nós</h2>
+        <p>
+            <strong>Bem-vindo ao nosso querido pesqueiro</strong>, um refúgio sereno onde a <em>emoção da pesca</em> encontra a <u>tranquilidade da natureza</u>. Nossos lagos são o lar de uma <mark>variedade de espécies de peixes</mark>, prontos para desafiar pescadores de todas as habilidades.
+        </p>
+    </div>
+
+    <div class="box">
+        <h2 id="TP">Tipos de Peixe</h2>
+        <ul>
+            <li>Principais peixes que temos em nossos lagos</li>
+            <ul>
+                <li>Tilápia</li>
+                <li>Traíra</li>
+                <li>Pintado</li>
+                <li>Piranha</li>
+            </ul>
+        </ul>
+        <img src="Peixe.jpeg" alt="Peixe" style="width: 100%; height: auto;">
+    </div>
+</div>
+
+<h2 id="AD">Atividades Disponíveis</h2>
+<table>
+    <tr>
+        <th rowspan="2">NOSSO PESQUEIRO</th>
+        <th colspan="3">ATIVIDADES E SERVIÇOS</th>
+    </tr>
+    <tr>
+        <th>Atividades de Pesca</th>
+        <th>Serviços de Lazer</th>
+        <th>Serviços de Alimentação</th>
+    </tr>
+    <tr>
+        <td rowspan="3" align="center">R$50,00 diária</td>
+        <td>Pesca Esportiva</td>
+        <td align="center">Trilhas</td>
+        <td align="center">Restaurante</td>
+    </tr>
+    <tr>
+        <td>Aluguel de Barcos</td>
+        <td align="center">Área de Piquenique</td>
+        <td align="center">Quiosque de Lanches</td>
+    </tr>
+    <tr>
+        <td>Aulas de Pesca</td>
+        <td align="center">Playground</td>
+        <td align="center">Churrasqueiras</td>
+    </tr>
+</table>
+
+<hr>
+
+<h2 id="P">Nossos Colaboradores</h2>
+<p>Ficou interessado em nosso pesqueiro? Adquira já seus equipamentos com vendedores parceiros: <a href="https://lista.mercadolivre.com.br/equipamento-de-pesca#D[A:equipamento%20de%20pesca]" target="_blank">Comprar</a></p>
+
+</body>
+</html>
