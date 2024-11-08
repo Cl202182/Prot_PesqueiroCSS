@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulário de Cadastro</title>
+    <link rel="icon" href="koi-fish.png" sizes="16x16">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(240, 248, 255);
+            margin: 20px;
+        }
+
+        form {
+            background-color: rgb(245, 255, 250);
+            border: 1px solid rgb(70, 130, 180);
+            border-radius: 10px;
+            padding: 20px;
+            width: 350px;
+            margin: 20px auto;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label, input, textarea, select {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid rgb(135, 206, 250);
+            box-sizing: border-box;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            background-color: rgb(70, 130, 180);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: deepskyblue;
+        }
+
+        .sexo-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .sexo-label {
+            display: flex;
+            align-items: center;
+            padding: 5px 10px;
+            background-color: rgb(245, 255, 250);
+            border: 1px solid rgb(135, 206, 250);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .sexo-label:hover {
+            background-color: rgb(224, 238, 255);
+        }
+
+        .sexo-label input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+
+        ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: rgb(70, 130, 180);
+            font-weight: bold;
+        }
+
+        ul li a:hover {
+            color: deepskyblue;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: 0;
+            height: 1px;
+            background-color: rgb(70, 130, 180);
+        }
+
+        meter {
+            width: 100%;
+            height: 30px;
+            margin-top: 10px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li> <a href="inicial.html" tabindex="11">VOLTAR</a> </li>
+</ul>
+<hr>
+
+<form>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" size="30" maxlength="30" minlength="3" required tabindex="1">
+
+    <label for="sexo">Sexo:</label>
+    <div class="sexo-container">
+        <label class="sexo-label"><input type="radio" id="sexo_f" name="sexo" value="F" checked tabindex="2"> Feminino</label>
+        <label class="sexo-label"><input type="radio" id="sexo_m" name="sexo" value="M" tabindex="3"> Masculino</label>
+    </div>
+
+    <label for="idade">Idade:</label>
+    <input type="number" id="idade" name="idade" min="18" max="70" value="18" required tabindex="4">
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" placeholder="pesca@gmail.com" size="30" maxlength="30" minlength="5" required tabindex="5">
+
+    <label for="celular">Celular:</label>
+    <input type="tel" id="celular" name="celular" placeholder="(99)9999-9999" size="30" maxlength="10" required tabindex="6">
+
+    <input type="submit" value="Cadastrar" tabindex="7">
+    <input type="reset" value="Limpar" tabindex="8">
+</form>
+
+<hr>
+
+<form>
+    <label for="site">Avalie nosso site (De 0 a 10):</label>
+    <input type="range" id="site" name="site" min="0" max="10" value="10" tabindex="9">
+
+    <label for="meter">Avaliação Geral (9/10):</label>
+    <meter min="0" max="100" value="90" low="50" optimum="120">9.0</meter>
+
+    <label for="exp">Fale um pouco sobre sua experiência:</label>
+    <textarea id="exp" name="exp" cols="35" rows="7" maxlength="500" spellcheck="false"></textarea>
+
+    <input type="submit" value="Avaliar" onclick="alert('Obrigado por nos avaliar');" tabindex="10">
+</form>
+
+</body>
+</html>
